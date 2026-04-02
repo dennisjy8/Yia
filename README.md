@@ -1,2 +1,2 @@
-# Yia-Website
+# Yia
 Data for Yia website
