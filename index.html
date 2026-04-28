@@ -43,19 +43,22 @@
         }
         .orbit-icon {
             position: absolute;
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
             display: flex;
-            align-items: center; justify-content: center;
+            align-items: center; 
+            justify-content: center;
             animation: orbit-spin 15s linear infinite;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            background: #ffffff;
+            border: 1px solid rgba(255,255,255,0.1);
         }
         .orbit-icon img {
-            width: 24px;
-            height: 24px;
-            object-contain: contain;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         /* Custom scrollbar */
         ::-webkit-scrollbar { width: 8px; }
@@ -178,11 +181,25 @@
                 <div class="flex justify-center">
                     <div class="orbit-container">
                         <div class="orbit-path"></div>
-                        <div class="w-20 h-20 bg-indigo-500/20 rounded-full flex items-center justify-center font-black text-indigo-400 border border-indigo-500/30">WC</div>
-                        <div class="orbit-icon bg-purple-900 text-white" style="animation-delay: 0s;">S</div>
-                        <div class="orbit-icon bg-red-600 text-white" style="animation-delay: -3.75s;">M</div>
-                        <div class="orbit-icon bg-blue-600 text-white" style="animation-delay: -7.5s;">C</div>
-                        <div class="orbit-icon bg-slate-700 text-white" style="animation-delay: -11.25s;">G</div>
+                        
+                        <!-- Central WorkClaw Icon -->
+                        <div class="w-20 h-20 rounded-full flex items-center justify-center overflow-hidden border border-indigo-500/30 shadow-[0_0_20px_rgba(79,70,229,0.4)]">
+                            <img src="WorkClaw Icon.jpeg" alt="WorkClaw" class="w-full h-full object-cover">
+                        </div>
+                
+                        <!-- Orbiting JPEG Icons -->
+                        <div class="orbit-icon" style="animation-delay: 0s;">
+                            <img src="User Icon.jpeg" alt="User">
+                        </div>
+                        <div class="orbit-icon" style="animation-delay: -3.75s;">
+                            <img src="Mail Icon.jpeg" alt="Mail">
+                        </div>
+                        <div class="orbit-icon" style="animation-delay: -7.5s;">
+                            <img src="Calendar Icon.jpeg" alt="Calendar">
+                        </div>
+                        <div class="orbit-icon" style="animation-delay: -11.25s;">
+                            <img src="Drive Icon.jpeg" alt="Drive">
+                        </div>
                     </div>
                 </div>
             </div>
