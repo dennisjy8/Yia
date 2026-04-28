@@ -21,93 +21,68 @@
             background: radial-gradient(circle at 50% 50%, rgba(79, 70, 229, 0.15) 0%, rgba(2, 6, 23, 0) 70%);
         }
         
-<style>
-    /* Keyframes for the orbital path */
-    @keyframes orbit-spin {
-        from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
-        to   { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
-    }
+        /* WorkClaw Orbit Animation */
+        @keyframes orbit-spin {
+            from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+            to   { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+        }
+        .orbit-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .orbit-path {
+            position: absolute;
+            width: 240px;
+            height: 240px;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 50%;
+        }
+        .orbit-icon {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center; justify-content: center;
+            animation: orbit-spin 15s linear infinite;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .orbit-icon img {
+            width: 24px;
+            height: 24px;
+            object-contain: contain;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #334155; }
+    </style>
+</head>
+<body class="text-slate-200 antialiased">
 
-    .orbit-wrapper {
-        position: relative;
-        width: 320px;
-        height: 320px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 2rem auto;
-    }
+    <nav class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 flex items-center justify-center">
+                    <img src="YiaLogo.jpg" alt="Yia Logo" class="w-full h-full object-contain">
+                </div>
+                <span class="text-2xl font-bold tracking-tighter text-white">Yia</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-400">
+                <a href="#framework" class="hover:text-indigo-400 transition">Framework</a>
+                <a href="#products" class="hover:text-indigo-400 transition">Products</a>
+                <a href="#team" class="hover:text-indigo-400 transition">Leadership</a>
+                <a href="#booking" class="px-5 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-500 transition">Book Audit</a>
+            </div>
+        </div>
+    </nav>
 
-    /* Central Icon - WorkClaw Icon.jpeg */
-    .center-icon {
-        position: absolute;
-        width: 100px;
-        height: 100px;
-        z-index: 20;
-        border-radius: 20px;
-        filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.3));
-        object-fit: cover;
-    }
-
-    /* The visual orbit ring */
-    .orbit-ring {
-        position: absolute;
-        width: 240px;
-        height: 240px;
-        border: 1.5px dashed rgba(148, 163, 184, 0.2);
-        border-radius: 50%;
-        z-index: 1;
-    }
-
-    /* Orbiting Icon Container */
-    .orbiting-asset {
-        position: absolute;
-        width: 54px;
-        height: 54px;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-        background: #ffffff; /* Base for JPEGs to pop */
-        animation: orbit-spin 20s linear infinite;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .orbiting-asset img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    /* Staggering the four icons around the circle */
-    .pos-1 { animation-delay: 0s; }
-    .pos-2 { animation-delay: -5s; }
-    .pos-3 { animation-delay: -10s; }
-    .pos-4 { animation-delay: -15s; }
-</style>
-
-<div class="orbit-wrapper">
-    <!-- Centerpiece -->
-    <img src="WorkClaw Icon.jpeg" alt="WorkClaw Center" class="center-icon">
-    
-    <!-- Visual Path -->
-    <div class="orbit-ring"></div>
-
-    <!-- Orbiting Assets -->
-    <div class="orbiting-asset pos-1">
-        <img src="User Icon.jpeg" alt="User">
-    </div>
-    <div class="orbiting-asset pos-2">
-        <img src="Calendar Icon.jpeg" alt="Calendar">
-    </div>
-    <div class="orbiting-asset pos-3">
-        <img src="Mail Icon.jpeg" alt="Mail">
-    </div>
-    <div class="orbiting-asset pos-4">
-        <img src="Drive Icon.jpeg" alt="Drive">
-    </div>
-</div>
     <!-- HERO SECTION -->
     <section class="relative pt-44 pb-32 overflow-hidden hero-gradient">
         <div class="max-w-7xl mx-auto px-6 text-center">
