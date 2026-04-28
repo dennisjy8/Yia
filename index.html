@@ -21,7 +21,7 @@
             background: radial-gradient(circle at 50% 50%, rgba(79, 70, 229, 0.15) 0%, rgba(2, 6, 23, 0) 70%);
         }
         
-        /* WorkClaw Orbit Animation */
+/* WorkClaw Orbit Animation */
         @keyframes orbit-spin {
             from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
             to   { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
@@ -49,11 +49,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
-            font-size: 12px;
             animation: orbit-spin 15s linear infinite;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
-
+        .orbit-icon img {
+            width: 24px;
+            height: 24px;
+            object-contain: contain;
+        }
         /* Custom scrollbar */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #020617; }
@@ -91,7 +95,7 @@
                 Capture Asymmetric Upside through <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-blue-400">Custom AI Solutions</span>
             </h1>
             <p class="max-w-2xl mx-auto text-xl text-slate-400 mb-10 leading-relaxed">
-                We implement AI strategy and automated workflows for small businesses, turning technological disruption into your primary competitive advantage.
+                We implement AI strategy and automated workflows for businesses, turning technological disruption into your primary competitive advantage.
             </p>
             <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <a href="#booking" class="w-full sm:w-auto px-8 py-4 bg-indigo-600 text-white font-bold rounded-xl hover:bg-indigo-500 hover:-translate-y-1 transition shadow-lg shadow-indigo-500/25 text-center">
@@ -153,21 +157,21 @@
                 <div>
                     <h2 class="text-5xl font-extrabold text-white mb-6 tracking-tight">Work<span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-blue-400">Claw</span></h2>
                     <p class="text-xl text-slate-300 mb-8 leading-relaxed">
-                        An employee that works alongside you[cite: 1] — reading your meetings, clearing follow-ups, and taking action where you can’t be[cite: 1].
+                        An employee that works alongside you.  Reads chats, reaches you on iMessage, takes action via email.  One brain.  Every channel.
                     </p>
                     <div class="space-y-6">
                         <div class="flex gap-4">
                             <div class="text-indigo-400 mt-1"><i data-lucide="layout-grid"></i></div>
                             <div>
                                 <h4 class="text-white font-bold mb-1">End the App Chaos</h4>
-                                <p class="text-slate-400 text-sm">Centralize Slack, Gmail, and Google Calendar into one autonomous interface[cite: 1].</p>
+                                <p class="text-slate-400 text-sm">Centralize Chats, Gmail, and Google Calendar into one autonomous interface.</p>
                             </div>
                         </div>
                         <div class="flex gap-4">
                             <div class="text-indigo-400 mt-1"><i data-lucide="bot"></i></div>
                             <div>
                                 <h4 class="text-white font-bold mb-1">Autonomous Action</h4>
-                                <p class="text-slate-400 text-sm">Reads meeting transcripts, drafts investor follow-ups, and manages invites without you lifting a finger[cite: 1].</p>
+                                <p class="text-slate-400 text-sm">Reads meeting transcripts, drafts investor follow-ups, and manages invites without you lifting a finger.</p>
                             </div>
                         </div>
                     </div>
@@ -183,49 +187,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Pricing Sub-section -->
-            <div class="text-center mb-12">
-                <h3 class="text-3xl font-bold text-white">WorkClaw Pricing[cite: 1]</h3>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Starter -->
-                <div class="glass-card p-8 rounded-3xl border-slate-800">
-                    <h4 class="text-slate-400 uppercase tracking-widest text-xs font-bold mb-4">Starter[cite: 1]</h4>
-                    <div class="text-4xl font-bold text-white mb-1">$19.99/mo[cite: 1]</div>
-                    <div class="text-indigo-400 text-xs font-medium mb-8 uppercase tracking-tighter">per user[cite: 1]</div>
-                    <ul class="space-y-4 text-sm text-slate-400">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500"></i> Up to 5 users[cite: 1]</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500"></i> Core Automations[cite: 1]</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500"></i> Standard Support[cite: 1]</li>
-                    </ul>
-                </div>
-                <!-- Pro -->
-                <div class="glass-card p-8 rounded-3xl border-indigo-500/50 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-indigo-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg">POPULAR</div>
-                    <h4 class="text-slate-400 uppercase tracking-widest text-xs font-bold mb-4">Pro[cite: 1]</h4>
-                    <div class="text-4xl font-bold text-white mb-1">$49.99/mo[cite: 1]</div>
-                    <div class="text-indigo-400 text-xs font-medium mb-8 uppercase tracking-tighter">per user[cite: 1]</div>
-                    <ul class="space-y-4 text-sm text-slate-400">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500"></i> Unlimited users[cite: 1]</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500"></i> Advanced custom agents[cite: 1]</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500"></i> Priority Support[cite: 1]</li>
-                    </ul>
-                </div>
-                <!-- Enterprise -->
-                <div class="glass-card p-8 rounded-3xl border-slate-800">
-                    <h4 class="text-slate-400 uppercase tracking-widest text-xs font-bold mb-4">Enterprise[cite: 1]</h4>
-                    <div class="text-4xl font-bold text-white mb-1">Custom[cite: 1]</div>
-                    <div class="text-indigo-400 text-xs font-medium mb-8 uppercase tracking-tighter">per user[cite: 1]</div>
-                    <ul class="space-y-4 text-sm text-slate-400">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500"></i> White-label options[cite: 1]</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500"></i> Dedicated server[cite: 1]</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500"></i> 24/7 Premium support[cite: 1]</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- LEADERSHIP SECTION -->
     <section id="team" class="py-24 border-t border-slate-900">
